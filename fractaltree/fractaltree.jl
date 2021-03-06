@@ -13,7 +13,7 @@ result[:,1] = [x,y]
 
 function calc(x,y,result,c1,c2,c3,c4,c5,c6)
     for i in 2:N+1
-        r = rand(0:L)
+        r = rand()*L
         # global x,y,result,c1,c2,c3,c4,c5,c6
         if r>=0.0 && r<=10.0
             x=a[1]*x
@@ -55,9 +55,8 @@ result,c1,c2,c3,c4,c5,c6 = calc(x,y,result,c1,c2,c3,c4,c5,c6)
 println([c1,c2,c3,c4,c5,c6])
 
 scatter(result[1, :], result[2, :],
-    markerstrokewidth=0.1,
-    markersize=1.0
-    # ratio=:equal
+    markerstrokewidth=0.01,
+    markersize=0.1
     )
 savefig("fractaltree.png")
 
