@@ -37,5 +37,5 @@ for iter in 1:5
         markerstrokewidth=0.01,
         markersize=0.1
         )
-    savefig("manderblot$iter.png")
+    savefig("./out/manderblot_tan$iter.png")
 end

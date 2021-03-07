@@ -28,7 +28,7 @@ function main()
         end
         println("左",cleft,"上",cup,"右",cright,"下",cdown)
         plot(result[1, :], result[2, :])
-        savefig("randomwalk$roop.png")
+        savefig("./out/randomwalk$roop.png")
     end    
 end
 
