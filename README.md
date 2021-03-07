@@ -1,13 +1,13 @@
 # Nonlinear_Dynamics_JL
 Rewriting Fortran programs to Julia-lang.
 
-# fractalgasket
+## fractalgasket
 ![fractalgasket_image](fractalgasket/fractalgasket.png)
 
-# fractaltree
+## fractaltree
 ![fractaltree_image](fractaltree/fractaltree.png)
 
-# langford
+## langford
 <!-- $$
 \begin{eqnarray}
   \left\{
@@ -24,7 +24,7 @@ $$ -->
 
 ![langfordRK4_image](langford/langfordRK4.png)
 
-# logistic
+## logistic
 <!-- $$
 x_{n+1}=ax_n(1-x_n)
 $$ --> 
@@ -33,7 +33,7 @@ $$ -->
 
 ![logistic_image](logistic/logistic.png)
 
-# lorenz
+## lorenz
 <!-- $$
 \begin{eqnarray}
   \left\{
@@ -50,7 +50,7 @@ $$ -->
 
 ![lorenz_image](lorenz/lorenz.png)
 
-# manderblot
+## manderblot
 <!-- $$
 \begin{eqnarray}
 z_{n+1}&=&z_n^2+c \nonumber \\
@@ -69,5 +69,5 @@ $$ -->
 
 ![mandelbrot_p2_image](mandelbrot/out/mandelbrot_p2.png)
 
-# randomwalk
+## randomwalk
 ![randomwalk_image](randomwalk/out/randomwalk1.png)
