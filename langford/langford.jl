@@ -28,7 +28,7 @@ prob = ODEProblem(g,u0,tspan,p)
 function plt()
     gr()
     plot(sol,vars=(1,2,3))
-    savefig("./langford/langfordTsit5.png")
+    savefig("langfordTsit5.png")
 end
 
 # plot using Gnuplot
@@ -39,8 +39,21 @@ function pltgnu()
     @gsp :- x y z tempo "w l notit lc palette" #palette(:plasma)
     @gsp :- "set title 'Langford attractor'" "set cblabel 'time'"
     @gsp :- xl  ab = "x" ylab = "y" zlab = "z"
-    save(term="pngcairo size 640,480", output="./langford/langford_gnu.png")
+    save(term="pngcairo size 640,480", output="langford_gnu.png")
 end
 
-@CPUtime plt()
+function pltgif()
+    plt = plot3d(1, xlim=(-1.5,1.5), ylim=(-1.5,1.5), zlim=(-0.5,2),
+                title = "Langford Attractor", 
+                xlabel="x", ylabel="y", zlabel="z",
+                size=(640, 480),
+                label="")
+    anim = @animate for step in 1:size(sol)[2]
+        push!(plt, sol[1,step], sol[2,step], sol[3,step])
+    end every 10
+    gif(anim, "langfordTsit5.gif", fps=30)
+end
+
+# @CPUtime plt()
 # @CPUtime pltgnu()
+@CPUtime pltgif()
