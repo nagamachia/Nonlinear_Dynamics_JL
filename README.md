@@ -50,7 +50,7 @@ $$ -->
 
 ![lorenz_image](lorenz/lorenz.png)
 
-## manderblot
+## mandelbrot
 <!-- $$
 \begin{eqnarray}
 z_{n+1}&=&z_n^2+c \nonumber \\
