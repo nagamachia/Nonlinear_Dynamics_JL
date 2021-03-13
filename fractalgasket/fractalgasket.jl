@@ -27,7 +27,8 @@ end
 scatter(result[1, :], result[2, :],
     markerstrokewidth=0.01,
     markersize=0.1,
-    ratio=:equal
+    ratio=:equal,
+    label=""
     )
 savefig("fractalgasket.png")
 

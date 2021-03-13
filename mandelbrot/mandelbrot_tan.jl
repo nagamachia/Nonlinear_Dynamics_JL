@@ -35,7 +35,8 @@ result = calc()
 for iter in 1:5
     scatter(result[iter,1,:], result[iter,2,:],
         markerstrokewidth=0.01,
-        markersize=0.1
+        markersize=0.1,
+        label=""
         )
     savefig("./out/mandelbrot_tan$iter.png")
 end
