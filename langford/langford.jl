@@ -27,8 +27,9 @@ prob = ODEProblem(g,u0,tspan,p)
 # plot using Plots
 function plt()
     gr()
-    plot(sol,vars=(1,2,3))
+    plot(sol,vars=(1,2,3),label="",xlabel="x", ylabel="y", zlabel="z")
     savefig("langfordTsit5.png")
+#     savefig("langfordRK4.png")
 end
 
 # plot using Gnuplot
@@ -54,6 +55,6 @@ function pltgif()
     gif(anim, "langfordTsit5.gif", fps=30)
 end
 
-# @CPUtime plt()
+@CPUtime plt()
 # @CPUtime pltgnu()
-@CPUtime pltgif()
+# @CPUtime pltgif()

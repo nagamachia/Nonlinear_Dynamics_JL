@@ -25,7 +25,7 @@ prob = ODEProblem(g,u0,tspan,p)
 
 function plt()
     gr()
-    plot(sol,vars=(1,2,3))
+    plot(sol,vars=(1,2,3), label="", xlabel="x", ylabel="y", zlabel="z")
     savefig("lorenz.png")
 end
 
@@ -51,6 +51,6 @@ function pltgif()
     gif(anim, "lorenzFps30.gif", fps=30)
 end
 
-# @CPUtime plt()
+@CPUtime plt()
 # @CPUtime pltgnu()
-@CPUtime pltgif()
+# @CPUtime pltgif()
