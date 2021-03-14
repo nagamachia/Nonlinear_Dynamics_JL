@@ -6,7 +6,7 @@ using Pkg
 # Pkg.add("Gnuplot")
 # Pkg.add("CPUTime")
 using ParameterizedFunctions, DifferentialEquations
-using Plots;gr()
+using Plots
 using Gnuplot, LinearAlgebra
 using CPUTime
 
@@ -26,8 +26,8 @@ prob = ODEProblem(g,u0,tspan,p)
 
 # plot using Plots
 function plt()
-    gr()
-    plot(sol,vars=(1,2,3),label="",xlabel="x", ylabel="y", zlabel="z")
+    plot(sol,vars=(1,2,3), title="Langford Attractor", 
+        xlabel="x", ylabel="y", zlabel="z", label="")
     savefig("langfordTsit5.png")
 #     savefig("langfordRK4.png")
 end

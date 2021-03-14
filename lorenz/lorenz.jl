@@ -6,8 +6,7 @@
 # Pkg.add("Gnuplot")
 # Pkg.add("CPUTime")
 using ParameterizedFunctions, DifferentialEquations
-using Plots
-using Gnuplot, LinearAlgebra
+using Plots, Gnuplot
 using CPUTime
 
 g = @ode_def LorenzExample begin
@@ -24,8 +23,9 @@ prob = ODEProblem(g,u0,tspan,p)
 @CPUtime sol = solve(prob,Tsit5(),reltol=1e-8,abstol=1e-8)
 
 function plt()
-    gr()
-    plot(sol,vars=(1,2,3), label="", xlabel="x", ylabel="y", zlabel="z")
+    # gr()
+    plot(sol,vars=(1,2,3), title="Lorenz Attractor", 
+        xlabel="x", ylabel="y", zlabel="z", label="")
     savefig("lorenz.png")
 end
 
