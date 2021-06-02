@@ -73,3 +73,24 @@ $$ -->
 
 ## randomwalk
 ![randomwalk_image](randomwalk/out/randomwalk1.png)
+
+## SIR
+<!-- $$
+\begin{eqnarray}
+  \left\{
+    \begin{array}{l}
+      \frac{dS}{dt} = -\beta SI \\
+      \frac{dI}{dt} = \beta SI - \gamma I \\
+      \frac{dR}{dt} = \gamma I
+    \end{array}
+  \right. \nonumber
+\end{eqnarray}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=%5Cbegin%7Beqnarray%7D%0D%0A%20%20%5Cleft%5C%7B%0D%0A%20%20%20%20%5Cbegin%7Barray%7D%7Bl%7D%0D%0A%20%20%20%20%20%20%5Cfrac%7BdS%7D%7Bdt%7D%20%3D%20-%5Cbeta%20SI%20%5C%5C%0D%0A%20%20%20%20%20%20%5Cfrac%7BdI%7D%7Bdt%7D%20%3D%20%5Cbeta%20SI%20-%20%5Cgamma%20I%20%5C%5C%0D%0A%20%20%20%20%20%20%5Cfrac%7BdR%7D%7Bdt%7D%20%3D%20%5Cgamma%20I%0D%0A%20%20%20%20%5Cend%7Barray%7D%0D%0A%20%20%5Cright.%20%5Cnonumber%0D%0A%5Cend%7Beqnarray%7D%0D"></div>
+
+💪😀 : S (Susceptible)  
+🦠🤧 : I (Infectious)  
+💉😷 : R (Removed/Recovered)  
+
+![SIR_image](SIR/SIR.png)
